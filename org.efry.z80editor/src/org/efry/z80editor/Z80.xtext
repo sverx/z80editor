@@ -28,15 +28,15 @@ Z80Model:
  REGISTER_IXL: 'ixl';
  REGISTER_IYH: 'iyh';
  REGISTER_IYL: 'iyl';
- 
+
  DOT: '.';
 
 terminal NEWLINE:
 // New line on DOS or Unix
     '\r'? '\n';
-    
-    
-VarName:  '_sizeof_' | 'a' | 'adc' | 'add' | 'af' | 'align' | 'and' | 'args' | 'asc' | 'asciitable' | 'asctable' | 'asm' | 'b' | 'bank' | 'banks' | 'banksize' | 'bankstotal' | 'bc' | 'bit' | 'byt' | 'c' | 'call' | 'ccf' | 'cp' | 'cpd' | 'cpdr' | 'cpi' | 'cpir' | 'cpl' | 'd' | 'daa' | 'db' | 'de' | 'dec' | 'def' | 'defaultslot' | 'define' | 'desc' | 'di' | 'djnz' | 'ds' | 'dsb' | 'dsw' | 'dw' | 'e' | 'ei' | 'else' | 'emptyfill' | 'enda' | 'endasm' | 'ende' | 'endif' | 'endm' | 'endme' | 'endr' | 'endro' | 'ends' | 'endst' | 'enum' | 'equ' | 'ex' | 'export' | 'exx' | 'filter' | 'force' | 'free' | 'fsize' | 'h' | 'halt' | 'hl' | 'i' | 'if' | 'ifdef' | 'ifdefm' | 'ifeq' | 'ifexists' | 'ifgr' | 'ifgreq' | 'ifle' | 'ifleeq' | 'ifndef' | 'ifndefm' | 'ifneq' | 'im' | 'in' | 'inc' | 'incbin' | 'include' | 'ind' | 'indr' | 'ini' | 'inir' | 'instanceof' | 'ix' | 'iy' | 'jp' | 'jr' | 'l' | 'ld' | 'ldd' | 'lddr' | 'ldi' | 'ldir' | 'm' | 'macro' | 'map' | 'memorymap' | 'nargs' | 'nc' | 'neg' | 'nop' | 'nz' | 'or' | 'org' | 'otdr' | 'otir' | 'out' | 'outd' | 'outi' | 'overwrite' | 'p' | 'pe' | 'po' | 'pop' | 'push' | 'r' | 'ramsection' | 'read' | 'redef' | 'redefine' | 'repeat' | 'rept' | 'res' | 'ret' | 'reti' | 'retn' | 'rl' | 'rla' | 'rlc' | 'rlca' | 'rld' | 'rombankmap' | 'rr' | 'rra' | 'rrc' | 'rrca' | 'rrd' | 'rst' | 'sbc' | 'scf' | 'sdsctag' | 'section' | 'semifree' | 'set' | 'skip' | 'sla' | 'slot' | 'slotsize' | 'smstag' | 'sp' | 'sra' | 'srl' | 'struct' | 'sub' | 'superfree' | 'swap' | 'to' | 'undef' | 'undefine' | 'xor' | 'z' | ID;
+
+
+VarName:  '_sizeof_' | 'a' | 'adc' | 'add' | 'af' | 'align' | 'and' | 'args' | 'asc' | 'asciitable' | 'asctable' | 'asm' | 'b' | 'bank' | 'banks' | 'banksize' | 'bankstotal' | 'bc' | 'bit' | 'byt' | 'c' | 'call' | 'ccf' | 'cp' | 'cpd' | 'cpdr' | 'cpi' | 'cpir' | 'cpl' | 'd' | 'daa' | 'db' | 'de' | 'dec' | 'def' | 'defaultslot' | 'define' | 'desc' | 'di' | 'djnz' | 'ds' | 'dsb' | 'dstruct' | 'dsw' | 'dw' | 'e' | 'ei' | 'else' | 'emptyfill' | 'enda' | 'endasm' | 'ende' | 'endif' | 'endm' | 'endme' | 'endr' | 'endro' | 'ends' | 'endst' | 'enum' | 'equ' | 'ex' | 'export' | 'exx' | 'filter' | 'force' | 'free' | 'fsize' | 'h' | 'halt' | 'hl' | 'i' | 'if' | 'ifdef' | 'ifdefm' | 'ifeq' | 'ifexists' | 'ifgr' | 'ifgreq' | 'ifle' | 'ifleeq' | 'ifndef' | 'ifndefm' | 'ifneq' | 'im' | 'in' | 'inc' | 'incbin' | 'include' | 'ind' | 'indr' | 'ini' | 'inir' | 'instanceof' | 'ix' | 'iy' | 'jp' | 'jr' | 'l' | 'ld' | 'ldd' | 'lddr' | 'ldi' | 'ldir' | 'm' | 'macro' | 'map' | 'memorymap' | 'nargs' | 'nc' | 'neg' | 'nop' | 'nz' | 'or' | 'org' | 'otdr' | 'otir' | 'out' | 'outd' | 'outi' | 'overwrite' | 'p' | 'pe' | 'po' | 'pop' | 'push' | 'r' | 'ramsection' | 'read' | 'redef' | 'redefine' | 'repeat' | 'rept' | 'res' | 'ret' | 'reti' | 'retn' | 'rl' | 'rla' | 'rlc' | 'rlca' | 'rld' | 'rombankmap' | 'rr' | 'rra' | 'rrc' | 'rrca' | 'rrd' | 'rst' | 'sbc' | 'scf' | 'sdsctag' | 'section' | 'semifree' | 'set' | 'skip' | 'sla' | 'slot' | 'slotsize' | 'smstag' | 'sp' | 'sra' | 'srl' | 'struct' | 'sub' | 'superfree' | 'swap' | 'to' | 'undef' | 'undefine' | 'xor' | 'z' | ID;
 
 AsciiTableTag hidden(): DOT 'asciitable';
 AscTableTag hidden(): DOT 'asctable';
@@ -49,6 +49,7 @@ DefineTag hidden(): DOT 'define';
 DefTag hidden(): DOT 'def';
 DsbTag hidden(): DOT 'dsb';
 DsTag hidden(): DOT 'ds';
+DstructTag hidden(): DOT 'dstruct';
 DswTag hidden(): DOT 'dsw';
 DwTag hidden(): DOT 'dw';
 ElseTag hidden(): DOT 'else';
@@ -100,10 +101,10 @@ UndefineTag hidden(): DOT 'undefine';
 UndefTag hidden(): DOT 'undef';
 
 Line:
-	 (Macro | MacroUsage | Sms | EmptyFill | Asm | EndAsm | Define | Redefine | Undefine | MemoryMap | RomBankMap | SdscTagCmd | Bank | Org | Orga | Section | Slot | Struct | EnumCmd | RamSection | Rept | Asc | Dsb | Dsw | Db | Dw | IncludeType | 
-	    IfCommands | Label | Asciitable | Command) NEWLINE
-	    | (Labels (c=(Command | Asc | Dsb | Dsw | Db | Dw)) NEWLINE)
-	    | {EmptyLine} NEWLINE;
+   (Macro | MacroUsage | Sms | EmptyFill | Asm | EndAsm | Define | Redefine | Undefine | MemoryMap | RomBankMap | SdscTagCmd | Bank | Org | Orga | Section | Slot | Struct | Dstruct | EnumCmd | RamSection | Rept | Asc | Dsb | Dsw | Db | Dw | IncludeType |
+      IfCommands | Label | Asciitable | Command) NEWLINE
+      | (Labels (c=(Command | Asc | Dsb | Dsw | Db | Dw)) NEWLINE)
+      | {EmptyLine} NEWLINE;
 
 IfCommands: IfCmd | IfDefCmd | IfnDefCmd | IfDefMCmd | IfnDefMCmd | IExistsCmd | IfEqCmd | IfnEqCmd | IfLeCmd | IfLeeqCmd | IfGrCmd | IfGreqCmd;
 Labels: labels+=Label+;
@@ -143,14 +144,14 @@ IfGreqCmd: IfGreqTag lhs=Expression rhs=NumericLiteral NEWLINE block+=Line* else
 
 MemoryMap: MemoryMapTag NEWLINE cmds+=MemoryMapCommands+ END_ME_TAG;
 MemoryMapCommands: {MemoryMapCommands} ('defaultslot' defaultSlot=INT NEWLINE) |
-	('slotsize' size=NUMBER NEWLINE) |
-	('slot' slotNumber=INT startKeyword=ID? startAddress=NUMBER 'size'? size=NUMBER? NEWLINE)
+  ('slotsize' size=NUMBER NEWLINE) |
+  ('slot' slotNumber=INT startKeyword=ID? startAddress=NUMBER 'size'? size=NUMBER? NEWLINE)
 ;
 
 RomBankMap: RomBankMapTag NEWLINE cmds+=RomBankCommands+ EndRoTag;
 RomBankCommands: ('bankstotal' (INT|HEX) NEWLINE) |
-	('banksize' (INT|HEX) NEWLINE) |
-	('banks' (INT|HEX) NEWLINE)
+  ('banksize' (INT|HEX) NEWLINE) |
+  ('banks' (INT|HEX) NEWLINE)
 ;
 
 Rept: (RepeatTag|ReptTag) repeatCount=NumericLiteral NEWLINE block+=Line+ EndRTag;
@@ -165,6 +166,7 @@ Slot: SlotTag value=(NUMBER);
 
 Struct: StructTag name=LabelType definitions+=VarDefinitionStruct* NEWLINE END_ST_TAG;
 
+Dstruct: DstructTag name=LabelType definitions+=VarDefinitionDstruct* ('values')? NEWLINE END_ST_TAG;
 
 EnumCmd: EnumTag startAddress=Expression order=('asc'|'desc')? 'export'? NEWLINE (definitions+=(VarDefinitionEnum)|NEWLINE)* EndETag;
 
@@ -176,6 +178,7 @@ VarDefinitionEnum:  EnumType NEWLINE;
 
 EnumType: (VarByte|VarWord|VarByteString|VarWordString|VarStruct);
 
+VarDefinitionDstruct: {VarDefinitionDstruct} NEWLINE ( name=ID type=(VarTypeByte|VarTypeWord|VarTypeByteString|VarTypeWordString))?;
 VarDefinitionStruct: {VarDefinitionStruct} NEWLINE ( name=ID type=(VarTypeByte|VarTypeWord|VarTypeByteString|VarTypeWordString))?;
 VarDefinition: (VarByte|VarWord|VarByteString|VarWordString|VarStruct) NEWLINE;
 
@@ -236,7 +239,7 @@ DotExpression  returns Ref hidden():
 
 EntityRef returns Ref hidden():
     {EntityRef} entity=[LabelType] (DOT structArrayIndex=INT)?
-; 
+;
 
 Expression returns Expr:
     BitwiseOp;
@@ -244,7 +247,7 @@ Expression returns Expr:
 BitwiseOp returns Expr:
     BitshiftOp
     ({BinaryExpr.left=current} op1=('|' | '&' | '~') right=Addition)*;
-    
+
 BitshiftOp returns Expr:
     Addition
     ({BinaryExpr.left=current} op1=('<<' | '>>') right=Addition)*;
@@ -265,7 +268,7 @@ UnaryMinus returns Expr:
 PrimaryExpression returns Expr:
     '(' Expression ')' |
     {NumLiteral} nibbleOp=('<'|'>')? value=NumericLiteral;
-      
+
 Command:
      (Adc|Add|And|Bit|Call|Ccf|Cp|Cpd|Cpdr|Cpi|Cpir|Cpl|Daa|Dec|Di|Djnz|Ei|Ex|Exx|Halt|Im|In|Inc|Ind|Indr|Ini|Inir|Jp|Jr|Ld|Ldd|Lddr|Ldi|Ldir|Neg|Nop|Or|Otdr|Otir|Out|Outi|Outd|Pop|Push|Res|Ret|Reti|Retn|Rl|Rla|Rlc|Rlca|Rld|RrCmd|Rra|Rrc|Rrca|Rrd|Rst|Sbc|Scf|Set|Sla|Sra|Srl|Sub|Xor)
 ;
@@ -380,7 +383,7 @@ dst returns Operand: =>indirectOp=NumericLiteralIndirect|op=(s|ss)|indirectOp=(B
 
 e returns Operand: (expr=Expression|anonLabel=(PLUS|PLUSPLUS|MINUS|MINUSMINUS|'_b'|'_f')); //fixme -126 to +129
 m returns Operand: op=(r)|indirectOp=(HLIndirect|IndexIndirectPlusOffset);
-p returns Operand: intType=NUMBER; //FIXME need to restrict to $0000, $0008, $0010, $0018, $0020, $0028, $0030 or $0038 
+p returns Operand: intType=NUMBER; //FIXME need to restrict to $0000, $0008, $0010, $0018, $0020, $0028, $0030 or $0038
 pp returns Operand: reg=(REGISTER_BC|REGISTER_DE|REGISTER_IX|REGISTER_SP);
 r returns Operand: reg=(REGISTER_A|REGISTER_B|REGISTER_C|REGISTER_D|REGISTER_E|REGISTER_H|REGISTER_L);
 rr returns Operand: reg=(REGISTER_BC|REGISTER_DE|REGISTER_IY|REGISTER_SP);
