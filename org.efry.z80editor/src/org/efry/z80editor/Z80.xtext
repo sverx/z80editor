@@ -154,7 +154,7 @@ RomBankCommands: ('bankstotal' (INT|HEX) NEWLINE) |
   ('banks' (INT|HEX) NEWLINE)
 ;
 
-Rept: (RepeatTag|ReptTag) repeatCount=NumericLiteral NEWLINE block+=Line+ EndRTag;
+Rept: (RepeatTag|ReptTag) repeatCount=NumericLiteral ('index' index=LabelType)? NEWLINE block+=Line+ EndRTag;
 
 Bank: {BankCmd} BankTag INT ('slot' slot=INT)?;
 Org: OrgTag value=(NUMBER);
