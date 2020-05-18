@@ -170,7 +170,7 @@ Dstruct: DstructTag name=LabelType definitions+=VarDefinitionDstruct* ('values')
 
 EnumCmd: EnumTag startAddress=Expression order=('asc'|'desc')? 'export'? NEWLINE (definitions+=(VarDefinitionEnum)|NEWLINE)* EndETag;
 
-RamSection: RamSectionTag sectionName=STRING ('bank' bank=NUMBER)? ('slot' slot=NUMBER)? ('align' align=NUMBER)? NEWLINE (definitions+=VarDefinition|NEWLINE)* END_S_TAG;
+RamSection: RamSectionTag sectionName=STRING ('bank' bank=NUMBER)? ('slot' slot=NUMBER)? ('org'|'orga' addr=NUMBER)? ('returnorg')? ('priority' prio=NUMBER)? ('force')? ('align' align=NUMBER)? ('appendto' appto=LabelType)? NEWLINE (definitions+=VarDefinition|NEWLINE)* END_S_TAG;
 
 
 //VarDefinitionEnum: {VarDef} (varName=VarName ':'? type=(EnumType))? NEWLINE;
