@@ -801,7 +801,7 @@ puts M into N.
 </tr>
 </table>
 <h2 id="toc1"><span>Effects</span></h2>
-<p>No flags are altered except in the cases of the I or R registers.</p>
+<p>No flags are altered except in the cases of loading the I or R registers into A.</p>
 <p>In those cases, C is preserved, H and N are reset, and alters Z and S. P/V is set if interrupts are enabled, reset otherwise.</p>
 <h2 id="toc2"><span>Uses</span></h2>
 <p>Use to load numbers into operands. They can either be numbers used in the code (usually 8-bits), or labels (usually 16-bits).</p>
@@ -875,14 +875,6 @@ rr represents a two byte register pair: BC, DE, HL, SP<br /></p>
 <tr>
 <td>r, a</td>
 <td>9</td>
-</tr>
-<tr>
-<td>a, (BC)</td>
-<td>7</td>
-</tr>
-<tr>
-<td>(XX), a</td>
-<td>13</td>
 </tr>
 <tr>
 <td>rr,XX</td>
