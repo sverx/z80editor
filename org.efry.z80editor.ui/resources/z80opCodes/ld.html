@@ -807,10 +807,10 @@ puts M into N.
 <p>Use to load numbers into operands. They can either be numbers used in the code (usually 8-bits), or labels (usually 16-bits).</p>
 <div class="code">
 <pre>
-<code>ld b,$05    ;Counter
+<code>ld b,$05     ;Counter
 
 ld hl,var    ;Variable label
-ld a,(var)    ;Write data to var</code>
+ld (var),a   ;Write data to var</code>
 </pre></div>
 <h2 id="toc3"><span>T-States</span></h2>
 <p>r denotes 8-bit register.<br />
@@ -821,20 +821,20 @@ rr represents a two byte register pair: BC, DE, HL, SP<br /></p>
 <td>4</td>
 </tr>
 <tr>
-<td>r,X</td>
+<td>r, X</td>
 <td>7</td>
 </tr>
 <tr>
-<td>r,(hl)</td>
+<td>r, (hl)</td>
 <td>7</td>
 </tr>
 <tr>
-<td>r,(ix+X)</td>
-<td>19</td>
+<td>(hl), r</td>
+<td>7</td>
 </tr>
 <tr>
-<td>r,(iy+X)</td>
-<td>19</td>
+<td>(hl), X</td>
+<td>10</td>
 </tr>
 <tr>
 <td>a, (bc)</td>
@@ -853,31 +853,15 @@ rr represents a two byte register pair: BC, DE, HL, SP<br /></p>
 <td>7</td>
 </tr>
 <tr>
-<td>(de),a</td>
+<td>(de), a</td>
 <td>7</td>
 </tr>
 <tr>
-<td>(XX),a</td>
+<td>(XX), a</td>
 <td>13</td>
 </tr>
 <tr>
-<td>a, i</td>
-<td>9</td>
-</tr>
-<tr>
-<td>a, r</td>
-<td>9</td>
-</tr>
-<tr>
-<td>i, a</td>
-<td>9</td>
-</tr>
-<tr>
-<td>r, a</td>
-<td>9</td>
-</tr>
-<tr>
-<td>rr,XX</td>
+<td>rr, XX</td>
 <td>10</td>
 </tr>
 <tr>
@@ -890,7 +874,7 @@ rr represents a two byte register pair: BC, DE, HL, SP<br /></p>
 </tr>
 <tr>
 <td>hl, (XX)</td>
-<td>20</td>
+<td>16</td>
 </tr>
 <tr>
 <td>ix, (XX)</td>
@@ -902,7 +886,7 @@ rr represents a two byte register pair: BC, DE, HL, SP<br /></p>
 </tr>
 <tr>
 <td>(XX), hl</td>
-<td>20</td>
+<td>16</td>
 </tr>
 <tr>
 <td>(XX), rr</td>
@@ -917,6 +901,46 @@ rr represents a two byte register pair: BC, DE, HL, SP<br /></p>
 <td>20</td>
 </tr>
 <tr>
+<td>r, (ix+X)</td>
+<td>19</td>
+</tr>
+<tr>
+<td>r, (iy+X)</td>
+<td>19</td>
+</tr>
+<tr>
+<td>(ix+X), r</td>
+<td>19</td>
+</tr>
+<tr>
+<td>(iy+X), r</td>
+<td>19</td>
+</tr>
+<tr>
+<td>(ix+X), X</td>
+<td>19</td>
+</tr>
+<tr>
+<td>(iy+X), X</td>
+<td>19</td>
+</tr>
+<tr>
+<td>a, I</td>
+<td>9</td>
+</tr>
+<tr>
+<td>a, R</td>
+<td>9</td>
+</tr>
+<tr>
+<td>I, a</td>
+<td>9</td>
+</tr>
+<tr>
+<td>R, a</td>
+<td>9</td>
+</tr>
+<tr>
 <td>sp, hl</td>
 <td>6</td>
 </tr>
@@ -928,4 +952,17 @@ rr represents a two byte register pair: BC, DE, HL, SP<br /></p>
 <td>sp, iy</td>
 <td>10</td>
 </tr>
+<tr>
+<td>sp, XX</td>
+<td>10</td>
+</tr>
+<tr>
+<td>sp, (XX)</td>
+<td>20</td>
+</tr>
+<tr>
+<td>(XX), sp</td>
+<td>20</td>
+</tr>
 </table>
+
